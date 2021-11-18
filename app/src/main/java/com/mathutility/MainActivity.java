@@ -38,8 +38,15 @@ public class MainActivity extends AppCompatActivity {
             double result;
             String format = format(usesCubic, input);
 
+            if (input == 1.0) {
+                outputTextView.setText(format + " = 1");
+                log(format + " = 1");
+                return;
+            }
+
             if (input == 0) {
                 outputTextView.setText(format + " = 0");
+                log(format + " = 0");
                 return;
             }
 
